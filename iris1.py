@@ -63,11 +63,15 @@ for i in range(tot_len):
 # 데이터를 학습시키고 예측하기
 clf = svm.SVC()
 clf.fit(train_data,train_label)
-pre = clf.predict(test_data)
+# pre = clf.predict(test_data)
 
 # 정답률 구하기
-ac_score = metrics.accuracy_score(test_label,pre)
-print("정답률: ",ac_score)
+# ac_score = metrics.accuracy_score(test_label,pre)
+# print("정답률: ",ac_score)
+
+realData =[[5.4,3.7,1.5,0.2]]
+result = clf.predict(realData)
+print(result)
 
 
 
